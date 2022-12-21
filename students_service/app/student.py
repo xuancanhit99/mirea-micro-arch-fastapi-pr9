@@ -1,3 +1,14 @@
+from pydantic import BaseModel
+
+
+class CreateStudentModel(BaseModel):
+    name: str
+    age: str
+    math: str
+    literature: str
+    english: str
+
+
 class Student:
     def __init__(self, id_, name, age, math, literature, english) -> None:
         self.id = id_

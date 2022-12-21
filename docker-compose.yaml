@@ -5,6 +5,13 @@ services:
     build: ./students_service
     ports:
       - "8000:80"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost/__health" ]
+      interval: 10s
+      timeout: 30s
+      retries: 5
+      start_period: 5s
+
   books:
     build: ./books_service
     ports:

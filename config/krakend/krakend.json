@@ -16,6 +16,15 @@
             }]
         },
         {
+            "endpoint": "/v1/students",
+            "method": "POST",
+            "backend": [{
+                "url_pattern": "/v1/stu",
+                "method": "POST",
+                "host": ["http://students"]
+            }]
+        },
+        {
             "endpoint": "/v1/students/{id}",
             "method": "GET",
             "output_encoding": "no-op",
