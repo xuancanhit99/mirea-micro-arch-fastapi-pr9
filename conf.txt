@@ -1,0 +1,16 @@
+pip freeze > requirements.txt
+docker build . -t image-stu
+docker run --name fastapi-stu -p 8000:80 image-stu
+
+
+
+
+
+
+pip freeze > requirements.txt
+docker build . -t image-book
+docker run --name fastapi-book -p 8001:80 image-book
+
+
+
+docker compose up --build
