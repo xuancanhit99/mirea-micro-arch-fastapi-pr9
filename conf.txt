@@ -14,3 +14,16 @@ docker run --name fastapi-book -p 8001:80 image-book
 
 
 docker compose up --build
+
+
+pip install flask
+pip install opentelemetry-distro
+pip install opentelemetry-exporter-jaeger
+pip install opentelemetry-instrumentation-fastapi
+pip freeze > requirements.txt
+
+docker compose up --build
+
+pip install prometheus-fastapi-instrumentator
+pip freeze > requirements.txt
+docker compose up --build
